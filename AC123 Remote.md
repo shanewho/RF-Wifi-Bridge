@@ -7,6 +7,8 @@ This remote controls the 433mhz RF roller shade motor from AOK.
 - 2 sync bits
 - 64 data bits
 - Pulse length: 290
+- First sync bit: `580,5220`
+- Second sync bit: `5220,580`
 - 0 = 290,580
 - 1 = 580,290
 
