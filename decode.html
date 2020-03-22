@@ -1,0 +1,32 @@
+Codes
+<input id="codes" style='width:900px'>
+<br>
+Binary
+<input id="binary" style='width:900px'>
+
+<script>
+  document.getElementById('codes').addEventListener('blur', o => {
+    document.getElementById('binary').value = 
+
+    o.target.value
+    .replace(/ /g, '')
+    .replace('580,5220,', '')
+    .replace('5220,580,', '')
+      .replace(/([0-9,]{8})/g, '$1 ')
+      .replace(/,/g, '')
+      .replace(/(290580)/g, '0')
+      .replace(/(580290)/g, '1')
+    .replace(/ /g, '')
+  })
+
+  document.getElementById('binary').addEventListener('blur', o => {
+    document.getElementById('codes').value = 
+
+    '9,580,5220,5220,580,' + 
+    o.target.value
+    .replace(/0/g, '290,580,')
+    .replace(/1/g, '580,290,')
+    + ','
+  })
+</script>
+
